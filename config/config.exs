@@ -2,21 +2,20 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-
 # Configure the main viewport for the Scenic application
 config :scenic_planet, :viewport, %{
-      name: :main_viewport,
-      size: {700, 600},
-      default_scene: {ScenicPlanet.Scene.Splash, ScenicPlanet.Scene.Sensor},
-      drivers: [
-        %{
-          module: Scenic.Driver.Glfw,
-          name: :glfw,
-          opts: [resizeable: false, title: "scenic_planet"],
-        }
-      ]
+  name: :main_viewport,
+  size: {700, 600},
+  # default_scene: {ScenicPlanet.Scene.Splash, ScenicPlanet.Scene.Sensor},
+  default_scene: {ScenicPlanet.Scene.Prototype, nil},
+  drivers: [
+    %{
+      module: Scenic.Driver.Glfw,
+      name: :glfw,
+      opts: [resizeable: false, title: "scenic_planet"]
     }
-
+  ]
+}
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
