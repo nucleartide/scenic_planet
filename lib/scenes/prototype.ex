@@ -7,7 +7,7 @@ defmodule ScenicPlanet.Scene.Prototype do
   @player_height 25
   @update_every_ms 16
 
-  @graph Graph.build()
+  @graph Graph.build(clear_color: :dark_slate_blue)
          |> rect({@player_width, @player_height}, id: :player, fill: :light_coral)
 
   #
